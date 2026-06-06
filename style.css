@@ -1,0 +1,118 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display:flex;
+    min-height:100vh;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #0f172a
+    );
+    color:white;
+}
+.container{
+    text-align:center;
+}
+h1{
+    font-size:3rem;
+    font-weight:700;
+    margin-bottom:10px;
+    letter-spacing:2px;
+}
+.subtitle{
+    color:#cbd5e1;
+    margin-bottom:25px;
+    font-size:1rem;
+}
+.score-box{
+    display:inline-flex;
+    gap:10px;
+    padding:12px 24px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.15);
+    margin-bottom:35px;
+    font-weight:600;
+}
+.game-board{
+    width:420px;
+    height:420px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.btn{
+    border:none;
+    cursor:pointer;
+    border-radius:25px;
+    transition:all .15s ease;
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.35),
+        inset 0 -5px 15px rgba(0,0,0,0.2);
+}
+.btn:hover{
+    transform:scale(1.03);
+}
+
+.btn:active{
+    transform:scale(.96);
+}
+
+.red{
+    background:#ef4444;
+}
+
+.yellow{
+    background:#facc15;
+}
+
+.green{
+    background:#22c55e;
+}
+
+.purple{
+    background:#a855f7;
+}
+
+
+.flash{
+    filter:brightness(1.8);
+    box-shadow:
+        0 0 30px rgba(255,255,255,0.8),
+        0 0 60px rgba(255,255,255,0.4);
+}
+
+.userflash{
+    transform:scale(.95);
+    filter:brightness(1.5);
+}
+/* Mobile */
+
+@media(max-width:500px){
+
+    h1{
+        font-size:2.2rem;
+    }
+
+    .game-board{
+        width:320px;
+        height:320px;
+        gap:14px;
+    }
+
+    .score-box{
+        padding:10px 18px;
+    }
+}
